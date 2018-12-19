@@ -108,7 +108,7 @@ This example shows how to automatically set up alerts on your resources when the
 
 Create a data source on a VM to alert on CPU usage:
 ```python
-from azure.mgmt.monitor import MonitorMgmtClient
+from azure.mgmt.monitor import MonitorManagementClient
 from azure.mgmt.monitor.models import RuleMetricDataSource
 
 resource_id = (
@@ -118,7 +118,7 @@ resource_id = (
 ).format(self.settings.SUBSCRIPTION_ID)
 
 # create client
-client = MonitorMgmtClient(
+client = MonitorManagementClient(
     credentials,
     subscription_id
 )
